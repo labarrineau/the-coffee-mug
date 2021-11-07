@@ -15,10 +15,6 @@ server.use(bodyParser.json());
 const path = require('path');
 server.use(express.static(path.join(__dirname, 'public')));
 
-// server.use((req, res, next) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'))
-// });
-
 server.use('/api', require('./api'));
 
 const { client } = require('./db');
